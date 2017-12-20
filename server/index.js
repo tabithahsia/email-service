@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+require('dotenv').config();
 const keys = require('./config/keys.js');
 
 const sgMail = require('@sendgrid/mail');
