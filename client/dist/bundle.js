@@ -18317,11 +18317,12 @@ var App = function (_React$Component) {
           { className: 'row justify-content-md-center' },
           _react2.default.createElement(
             'div',
-            { 'class': 'col-md-auto' },
+            { className: 'col-md-auto' },
+            _react2.default.createElement('img', { src: '../../yahoogle.jpg', alt: 'Yahoogle', height: '200', width: '400' }),
             _react2.default.createElement(
               'h1',
               null,
-              'YahoogleMail'
+              'Mail Service'
             ),
             _react2.default.createElement(_EmailForm2.default, null)
           )

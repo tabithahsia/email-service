@@ -14,8 +14,9 @@ class App extends React.Component {
     return (
       <div className="container">
         <div className="row justify-content-md-center">
-          <div class="col-md-auto">
-            <h1>YahoogleMail</h1>
+          <div className="col-md-auto">
+            <img src="../../yahoogle.jpg" alt="Yahoogle" height="200" width="400"/>
+            <h1>Mail Service</h1>
             <EmailForm />
           </div>
         </div>
