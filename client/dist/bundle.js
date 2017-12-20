@@ -18321,7 +18321,7 @@ var App = function (_React$Component) {
             _react2.default.createElement('img', { src: '../../yahoogle.jpg', alt: 'Yahoogle', height: '200', width: '400' }),
             _react2.default.createElement(
               'h1',
-              null,
+              { className: 'row justify-content-md-center' },
               'Mail Service'
             ),
             _react2.default.createElement(_EmailForm2.default, null)
@@ -18407,7 +18407,7 @@ var EmailForm = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'row justify-content-md-center' },
         _react2.default.createElement(
           'form',
           { onSubmit: this.sendEmail },
@@ -18416,7 +18416,7 @@ var EmailForm = function (_React$Component) {
             null,
             'From',
             _react2.default.createElement('br', null),
-            _react2.default.createElement('input', { type: 'email', placeholder: 'email@email.com', value: this.state.from, onChange: function onChange(e) {
+            _react2.default.createElement('input', { type: 'email', placeholder: 'emma.stone@email.com', value: this.state.from, onChange: function onChange(e) {
                 return _this2.setState({ from: e.target.value });
               } })
           ),
@@ -18426,7 +18426,7 @@ var EmailForm = function (_React$Component) {
             null,
             'To',
             _react2.default.createElement('br', null),
-            _react2.default.createElement('input', { type: 'email', placeholder: 'email@email.com', value: this.state.to, onChange: function onChange(e) {
+            _react2.default.createElement('input', { type: 'email', placeholder: 'poophead@email.com', value: this.state.to, onChange: function onChange(e) {
                 return _this2.setState({ to: e.target.value });
               } })
           ),
@@ -18444,14 +18444,18 @@ var EmailForm = function (_React$Component) {
           _react2.default.createElement(
             'label',
             null,
-            'Message:',
+            'Message',
             _react2.default.createElement('br', null),
             _react2.default.createElement('textarea', { value: this.state.message, onChange: function onChange(e) {
                 return _this2.setState({ message: e.target.value });
               } })
           ),
           _react2.default.createElement('br', null),
-          _react2.default.createElement('input', { type: 'submit', value: 'Submit', className: 'btn btn-lg btn-warning' })
+          _react2.default.createElement(
+            'div',
+            { className: 'text-center' },
+            _react2.default.createElement('input', { type: 'submit', value: 'Submit', className: 'btn btn-lg btn-warning' })
+          )
         )
       );
     }

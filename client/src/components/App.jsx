@@ -16,7 +16,7 @@ class App extends React.Component {
         <div className="row justify-content-md-center">
           <div className="col-md-auto">
             <img src="../../yahoogle.jpg" alt="Yahoogle" height="200" width="400"/>
-            <h1>Mail Service</h1>
+            <h1 className="row justify-content-md-center">Mail Service</h1>
             <EmailForm />
           </div>
         </div>

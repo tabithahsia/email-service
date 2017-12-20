@@ -33,18 +33,18 @@ class EmailForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="row justify-content-md-center">
         <form onSubmit={this.sendEmail}>
           <label>
             From
             <br />
-            <input type="email" placeholder="email@email.com" value={this.state.from} onChange={e => this.setState({from: e.target.value})} />
+            <input type="email" placeholder="emma.stone@email.com" value={this.state.from} onChange={e => this.setState({from: e.target.value})} />
           </label>
           <br />
           <label>
             To
             <br />
-            <input type="email" placeholder="email@email.com" value={this.state.to} onChange={e => this.setState({to: e.target.value})} />
+            <input type="email" placeholder="poophead@email.com" value={this.state.to} onChange={e => this.setState({to: e.target.value})} />
           </label>
           <br />
           <label>
@@ -54,12 +54,14 @@ class EmailForm extends React.Component {
           </label>
           <br />
           <label>
-            Message:
+            Message
             <br />
             <textarea value={this.state.message} onChange={e => this.setState({message: e.target.value})} />
           </label>
           <br />
-          <input type="submit" value="Submit" className="btn btn-lg btn-warning" />
+          <div className="text-center">
+            <input type="submit" value="Submit" className="btn btn-lg btn-warning" />
+          </div>
 
         </form>
 
