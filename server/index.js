@@ -5,7 +5,7 @@ require('dotenv').config();
 
 const sgMail = require('@sendgrid/mail');
 // sgMail.setApiKey(keys.SENDGRID_API_KEY);
-sgMail.setApiKey(process.env.SENDGRI_API_KEY);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 var mailgun = require("mailgun-js")({apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN});
 

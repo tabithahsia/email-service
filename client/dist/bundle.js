@@ -18396,6 +18396,7 @@ var EmailForm = function (_React$Component) {
         message: this.state.message
       }).then(function (response) {
         console.log('response: ', response);
+        window.location.reload(true);
       }).catch(function (error) {
         console.log('error in sendEmail(): ', error);
       });
