@@ -13,7 +13,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Really Okay Email Service</h1>
+        <h1>YahoogleMail</h1>
         <EmailForm />
       </div>
     )

@@ -18315,7 +18315,7 @@ var App = function (_React$Component) {
         _react2.default.createElement(
           'h1',
           null,
-          'Really Okay Email Service'
+          'YahoogleMail'
         ),
         _react2.default.createElement(_EmailForm2.default, null)
       );
