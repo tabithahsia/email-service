@@ -15,39 +15,46 @@ app.use(express.static(__dirname + '/../client/'));
 
 
 app.post('/sendemail', function(req, res){
-  // console.log('this is the req', req.body);
   res.send('POST REQUEST');
-
   // SENDGRID
-
-  // const msg = {
-  //   to: req.body.to,
-  //   from: req.body.from,
-  //   subject: req.body.subject,
-  //   text: req.body.message
-  // }
-  // // console.log('this is msg: ', msg);
-  // sgMail.send(msg)
-  // .then(() => {
-  //   console.log('sgMail sent message successfully')
-  // })
-  // .catch(error => {
-  //   console.error(error.toString());
-  //   const {message, code, response} = error;
-  //   const {headers, body} = response;
-  // })
-
-  // MAILGUN
-  var data = {
+  const msg = {
     to: req.body.to,
     from: req.body.from,
     subject: req.body.subject,
     text: req.body.message
   }
-  mailgun.messages().send(data, function (error, body) {
-    console.log('message has been sent');
-    console.log(body);
-  });
+  // const msg1 = {} // used to test errors
+  // console.log('this is msg: ', msg);
+  sgMail
+  .send(msg)
+  .then(() => {
+    console.log('sgMail sent message successfully')
+  })
+  .catch(error => {
+    console.error(error.toString());
+    const {message, code, response} = error;
+    // const {headers, body} = response;
+    // MAILGUN 
+    mailgun.messages().send(msg, function (error, body) {
+      console.log('mailgun message has been sent');
+      console.log(body);
+    })
+  })
+  // .then(() => {
+  //   mailgun.messages().send(msg, function (error, body) {
+  //     console.log('mailgun message has been sent');
+  //     console.log(body);
+  //   })
+  // })
+
+  // MAILGUN
+  // var data = {
+  //   to: req.body.to,
+  //   from: req.body.from,
+  //   subject: req.body.subject,
+  //   text: req.body.message
+  // }
+
 })
 
 
