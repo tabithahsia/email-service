@@ -1,12 +1,13 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 require('dotenv').config();
-const keys = require('./config/keys.js');
+// const keys = require('./config/keys.js');
 
 const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey(keys.SENDGRID_API_KEY);
+// sgMail.setApiKey(keys.SENDGRID_API_KEY);
+sgMail.setApiKey(process.env.SENDGRI_API_KEY);
 
-var mailgun = require("mailgun-js")({apiKey: keys.MAILGUN_API_KEY, domain: keys.MAILGUN_DOMAIN});
+var mailgun = require("mailgun-js")({apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN});
 
 var app = express();
 var port = process.env.PORT || 3000;
