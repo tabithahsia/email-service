@@ -1,6 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-const keys = require('./config/keys');
+const keys = require('./config/keys.js');
 
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(keys.SENDGRID_API_KEY);
@@ -34,27 +34,13 @@ app.post('/sendemail', function(req, res){
     console.error(error.toString());
     const {message, code, response} = error;
     // const {headers, body} = response;
-    // MAILGUN 
+
+    // MAILGUN
     mailgun.messages().send(msg, function (error, body) {
       console.log('mailgun message has been sent');
       console.log(body);
     })
   })
-  // .then(() => {
-  //   mailgun.messages().send(msg, function (error, body) {
-  //     console.log('mailgun message has been sent');
-  //     console.log(body);
-  //   })
-  // })
-
-  // MAILGUN
-  // var data = {
-  //   to: req.body.to,
-  //   from: req.body.from,
-  //   subject: req.body.subject,
-  //   text: req.body.message
-  // }
-
 })
 
 
