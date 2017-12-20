@@ -18311,13 +18311,21 @@ var App = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'container' },
         _react2.default.createElement(
-          'h1',
-          null,
-          'YahoogleMail'
-        ),
-        _react2.default.createElement(_EmailForm2.default, null)
+          'div',
+          { className: 'row justify-content-md-center' },
+          _react2.default.createElement(
+            'div',
+            { 'class': 'col-md-auto' },
+            _react2.default.createElement(
+              'h1',
+              null,
+              'YahoogleMail'
+            ),
+            _react2.default.createElement(_EmailForm2.default, null)
+          )
+        )
       );
     }
   }]);
@@ -18405,7 +18413,8 @@ var EmailForm = function (_React$Component) {
           _react2.default.createElement(
             'label',
             null,
-            'From:',
+            'From',
+            _react2.default.createElement('br', null),
             _react2.default.createElement('input', { type: 'email', placeholder: 'email@email.com', value: this.state.from, onChange: function onChange(e) {
                 return _this2.setState({ from: e.target.value });
               } })
@@ -18414,7 +18423,8 @@ var EmailForm = function (_React$Component) {
           _react2.default.createElement(
             'label',
             null,
-            'To:',
+            'To',
+            _react2.default.createElement('br', null),
             _react2.default.createElement('input', { type: 'email', placeholder: 'email@email.com', value: this.state.to, onChange: function onChange(e) {
                 return _this2.setState({ to: e.target.value });
               } })
@@ -18423,7 +18433,8 @@ var EmailForm = function (_React$Component) {
           _react2.default.createElement(
             'label',
             null,
-            'Subject:',
+            'Subject',
+            _react2.default.createElement('br', null),
             _react2.default.createElement('input', { type: 'text', value: this.state.subject, onChange: function onChange(e) {
                 return _this2.setState({ subject: e.target.value });
               } })
@@ -18439,7 +18450,7 @@ var EmailForm = function (_React$Component) {
               } })
           ),
           _react2.default.createElement('br', null),
-          _react2.default.createElement('input', { type: 'submit', value: 'Submit' })
+          _react2.default.createElement('input', { type: 'submit', value: 'Submit', className: 'btn btn-lg btn-warning' })
         )
       );
     }

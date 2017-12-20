@@ -12,9 +12,13 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>YahoogleMail</h1>
-        <EmailForm />
+      <div className="container">
+        <div className="row justify-content-md-center">
+          <div class="col-md-auto">
+            <h1>YahoogleMail</h1>
+            <EmailForm />
+          </div>
+        </div>
       </div>
     )
   }

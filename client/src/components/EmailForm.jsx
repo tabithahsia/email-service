@@ -36,17 +36,20 @@ class EmailForm extends React.Component {
       <div>
         <form onSubmit={this.sendEmail}>
           <label>
-            From:
+            From
+            <br />
             <input type="email" placeholder="email@email.com" value={this.state.from} onChange={e => this.setState({from: e.target.value})} />
           </label>
           <br />
           <label>
-            To:
+            To
+            <br />
             <input type="email" placeholder="email@email.com" value={this.state.to} onChange={e => this.setState({to: e.target.value})} />
           </label>
           <br />
           <label>
-            Subject:
+            Subject
+            <br />
             <input type="text" value={this.state.subject} onChange={e => this.setState({subject: e.target.value})} />
           </label>
           <br />
@@ -56,7 +59,7 @@ class EmailForm extends React.Component {
             <textarea value={this.state.message} onChange={e => this.setState({message: e.target.value})} />
           </label>
           <br />
-          <input type="submit" value="Submit"/>
+          <input type="submit" value="Submit" className="btn btn-lg btn-warning" />
 
         </form>
 
