@@ -18437,7 +18437,7 @@ var EmailForm = function (_React$Component) {
             null,
             'To',
             _react2.default.createElement('br', null),
-            _react2.default.createElement('input', { type: 'email', placeholder: 'poophead@email.com', value: this.state.to, onChange: function onChange(e) {
+            _react2.default.createElement('input', { type: 'email', placeholder: 'beyonce@email.com', value: this.state.to, onChange: function onChange(e) {
                 return _this2.setState({ to: e.target.value });
               } })
           ),

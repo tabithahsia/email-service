@@ -46,7 +46,7 @@ class EmailForm extends React.Component {
           <label>
             To
             <br />
-            <input type="email" placeholder="poophead@email.com" value={this.state.to} onChange={e => this.setState({to: e.target.value})} />
+            <input type="email" placeholder="beyonce@email.com" value={this.state.to} onChange={e => this.setState({to: e.target.value})} />
           </label>
           <br />
           <label>
