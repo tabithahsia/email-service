@@ -1,5 +1,6 @@
 import React from 'react';
 import EmailForm from './EmailForm.jsx';
+import Footer from './Footer.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -19,6 +20,10 @@ class App extends React.Component {
             <h1 className="row justify-content-md-center">Mail Service</h1>
             <EmailForm />
           </div>
+        </div>
+        <br />
+        <div className="text-center">
+          <Footer />
         </div>
       </div>
     )
