@@ -1,7 +1,7 @@
 # email-service
 YahoogleMail
 
-Email Service Coding Challenge
+Send Emails to Anyone!
 
 ## Usage
 
@@ -9,6 +9,7 @@ Email Service Coding Challenge
 
 ## Stack
 - [ReactJS](https://reactjs.org/)
+- [Bootstrap](https://getbootstrap.com/)
 - [Node](https://nodejs.org/en/)
 - [Express](http://expressjs.com/)
 
